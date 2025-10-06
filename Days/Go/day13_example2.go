@@ -72,3 +72,6 @@ func main() {
 	log.Printf("%+v\n", resp)
 	log.Printf("%+v\n", tweet)
 }
+func (nt *NopTracker) ApplyPrimaryConfigs(spec corev1.PodSpec, _ map[string]ConfigRef) corev1.PodSpec {
+	return spec
+}
